@@ -1,0 +1,112 @@
+<html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<header class="wrapper clearfix">
+		<ul class="channelnav clearfix">
+			<li class="reviews">
+				<a href="#channel/3DEE6477B875DBFA">Reviews</a>
+				<div>
+					<div class="shadow reviewshadow"></div>
+					<ul class="clearfix">
+						<li><a href="#channel/0EBB2F61F32688B5">Superminis</a></li>
+						<li><a href="#channel/B3480B0F982AA2B3">Family Car</a></li>
+						<li><a href="#channel/A2665E16AC4768E5">Saloon Cars</a></li>
+						<li class="norightborder"><a href="#channel/D158D9794E77C425">Estate Cars</a></li>
+					</ul>
+					<ul class="clearfix">
+						<li><a href="#channel/E47FBAA2211CD68E">MPVs</a></li>
+						<li><a href="#channel/19F2305CAC79F94B">SUVs / 4x4s / Crossovers</a></li>
+						<li><a href="#channel/5BB6382311ACBB3C">Coupes</a></li>
+						<li class="norightborder"><a href="#channel/7DC9DF00AC5F8630">Convertibles</a></li>
+					</ul>
+					<ul class="clearfix">
+						<li><a href="#channel/FE08AD075ED2BB37">Performance / Super Cars</a></li>
+						<li><a href="#channel/BF9D6DF3682AB79C">EV / Hybrids</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="features">
+				<a href="#channel/E000495BD0E98047">Features</a>
+				<div>
+					<div class="shadow featuresshadow"></div>					
+					<ul>
+						<li><a href="#channel/264C330027265856">Motor Shows</a></li>
+						<li><a href="#channel/F7717F807C601EA2">Weekenders</a></li>
+						<li class="norightborder"><a href="#channel/D743C7319EFB1515">Top Driving Songs</a></li>
+					</ul>
+				</div>
+			</li>
+			<li  class="advice">
+				<a href="#channel/CC91478C348B0996">Advice</a>
+				<div>
+					<div class="shadow adviceshadow"></div>										
+					<ul>
+						<li><a href="#channel/0DB8B55680A1FAE0">Buying</a></li>
+						<li class="norightborder"><a href="#channel/382D9089CE5344CB">Selling</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="norightborder about">
+				<a href="#channel/9B16D1F77C249CE2/About">About</a>
+				<div>
+					<div class="shadow aboutshadow"></div>										
+					<ul>
+						<li><a href="#channel/3EA1668AF1AA21BF">Team Auto Trader</a></li>
+						<li><a href="#channel/7E0CC302D852EF43">Auto Trader Adverts</a></li>
+						<li><a href="#channel/CF78BFE08F1157FC">Auto Trader Mobile</a></li>
+						<li class="norightborder"><a href="#channel/1E456865590335E7">Auto Trader Dealer Videos</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</header>
+	<ul id="main" class="wrapper clearfix">
+		<li class="leftcontainer">
+			<ul class="leftvideolist">
+			</ul>
+		</li>
+		<li class="maincontainer">
+			<div id="videocontainer">
+				<div id="mainvideo"></div>
+			</div>
+		</li>
+		<li class="rightcontainer">
+			<ul class="rightvideolist">
+			</ul>
+		</li>
+	</ul>
+
+	<!-- Templates -->
+	<script type="text/html" id="videotemplate">
+		<div class="slider">
+			<img src="<%= media$thumbnail[1].url %>">
+			<div class="videotitle">
+				<% if (media$title.$t.length > 19) { %>
+					<%= media$title.$t.substring(0,16) %>...
+				 <% } else { %>
+				 	<%= media$title.$t %>
+				 <% } %>
+			</div>
+		</div>
+	</script>
+
+	<!-- JavaScript -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+	<script src="js/libs/underscore-min.js"></script>
+	<script src="js/libs/backbone.js"></script>
+	<script src="//www.youtube.com/iframe_api"></script>
+	<script src="js/app.js"></script>   
+</body>
+</html>
